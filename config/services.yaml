@@ -6,6 +6,10 @@
 parameters:
 
 services:
+    App\Security\EmailVerifier:
+        arguments:
+            $verifyEmailHelper: '@symfonycasts.verify_email.helper'
+            $mailer: '@mailer.mailer'
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
