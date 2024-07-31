@@ -32,7 +32,13 @@
     }
 </style>
 
+    <h1>Edit Profile</h1>
 
-
- 
+    {{ form_start(profileForm) }}
+        {{ form_row(profileForm.email) }}
+        {{ form_row(profileForm.lastName) }}
+        {{ form_row(profileForm.currentPassword) }}
+        {{ form_row(profileForm.newPassword) }}
+        <button class="btn btn-primary">Save changes</button>
+    {{ form_end(profileForm) }}
 {% endblock %}
